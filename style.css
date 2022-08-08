@@ -1,0 +1,433 @@
+@import url('https://fonts.googleapis.com/css2?family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+
+
+
+
+#header{
+    width: 100%;
+    max-height:53px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    font-family: "Prompt";
+} 
+
+
+#logo1[src="logo.png"]{
+    width: 52px;
+    border-radius: 15px;
+    margin-top: 25px;
+    margin-left: 10px;
+}
+#martin1{
+    width: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    height: 180px;
+    margin-left: -20px;
+
+}
+#flexbox1{
+    display: flex;
+    flex-direction: row ;
+    align-items: center;
+    justify-content: space-between;
+    margin: 20px 0 20px 0;
+
+}
+h1{
+    font-size:large;
+    margin-top: 20px;
+    margin-bottom: 15px;
+    padding: 5px;
+}
+.paragraph1{
+    font-size:x-small;
+    text-overflow: initial;
+    text-align: left;
+    margin-top: 25px;
+    margin-bottom: 60px;
+    line-height: 18px;
+    padding: 10px;
+}
+#colorbg1{
+    background-color: rgb(190, 248, 210);
+    margin: 0;
+    border-radius: 20px;
+    text-align: end;
+    max-height: 30%;
+    
+}
+#conure1{
+    width: 50%;
+    border-radius: 10px;
+    z-index: 2;
+    position: absolute;
+    top: 100px;
+    left: -5px;
+    
+    
+
+}
+#conure2{
+    width: 40%;
+    border-radius: 10px;
+    z-index: 1;
+    position: absolute;
+    top: -40px;
+    left: 20px;
+    
+}
+#conure3{
+    width: 40%;
+    
+    border-radius: 10px;
+    z-index: 3;
+    position: absolute;
+    top: 40px;
+    left: 120px;
+    
+}
+#colorbg2{
+    background-color: rgb(190, 248, 210);
+    height: auto;
+    padding: 16px;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+    height: 400px;
+    color: aliceblue;
+}
+#imgbg1{
+   background-image: url(https://master.salamandre.net/media/21912/grebe-huppe-fotolia2-848x406.jpg); 
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 3px;
+    height: 48%;
+    width: 90%;
+}
+#imgbg2{
+    background-image: url(https://upload.wikimedia.org/wikipedia/commons/5/5a/Sturnus_vulgaris_2_%28Marek_Szczepanek%29.jpg);
+    background-repeat: no-repeat;
+    margin: 0;
+    height: 48%;
+    background-size: cover;
+    width: 90%;
+  
+}
+#logo2{
+    width: 100px;
+    border-radius: 50px;
+}
+.span1{
+    font-weight: 800;
+}
+.titre{
+   /* margin: 0;*/
+    padding-right: 20px;
+}
+.smallFont{
+    font-size:x-small;
+}
+.p1{
+    padding-right: 20px;
+}
+.paragraph2{
+    font-size:x-small;
+    text-overflow: initial;
+    text-align: right;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    line-height: 18px;
+}
+.posimage{
+    position: relative;
+
+}
+#body{
+    font-family: "Prompt";
+    margin:0;
+}
+.paddingright{
+    padding-right: 10px;
+    padding-top: 212px;
+    padding-bottom: 20px;
+}
+
+
+
+#glissement {
+    height: 313px;
+    margin: 60px;
+    display: grid;
+    grid-template-rows: 250px 100px;
+    grid-template-columns: 1fr 30px 30px 30px 30px 30px 1fr;
+    align-items: center;
+    justify-items: center;
+  }
+  
+  main#carousel {
+    grid-row: 1 / 2;
+    grid-column: 1 / 8;
+    width: 100vw;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    transform-style: preserve-3d;
+    perspective: 600px;
+    --items: 5;
+    --middle: 3;
+    --position: 1;
+    pointer-events: none;
+  }
+  
+  div.item {
+    position: absolute;
+    width: 300px;
+    height: 400px;
+    border-radius: 10px;
+    padding-top: 174px;
+    text-align: center;
+    --r: calc(var(--position) - var(--offset));
+    --abs: max(calc(var(--r) * -1), var(--r));
+    transition: all 0.25s linear;
+    transform: rotateY(calc(-10deg * var(--r)))
+      translateX(calc(-300px * var(--r)));
+    z-index: calc((var(--position) - var(--abs)));
+  }
+  
+  div.item:nth-of-type(1) {
+    --offset: 1;
+   
+  }
+  div.item:nth-of-type(2) {
+    --offset: 2;
+    
+  }
+  div.item:nth-of-type(3) {
+    --offset: 3;
+   
+  }
+  div.item:nth-of-type(4) {
+    --offset: 4;
+    
+  }
+  div.item:nth-of-type(5) {
+    --offset: 5;
+   
+  }
+  
+  input:nth-of-type(1) {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+  }
+  input:nth-of-type(1):checked ~ main#carousel {
+    --position: 1;
+  }
+  
+  input:nth-of-type(2) {
+    grid-column: 3 / 4;
+    grid-row: 2 / 3;
+  }
+  input:nth-of-type(2):checked ~ main#carousel {
+    --position: 2;
+  }
+  
+  input:nth-of-type(3) {
+    grid-column: 4 /5;
+    grid-row: 2 / 3;
+  }
+  input:nth-of-type(3):checked ~ main#carousel {
+    --position: 3;
+  }
+  
+  input:nth-of-type(4) {
+    grid-column: 5 / 6;
+    grid-row: 2 / 3;
+  }
+  input:nth-of-type(4):checked ~ main#carousel {
+    --position: 4;
+  }
+  
+  input:nth-of-type(5) {
+    grid-column: 6 / 7;
+    grid-row: 2 / 3;
+  }
+  input:nth-of-type(5):checked ~ main#carousel {
+    --position: 5;
+  }
+  .serpentaire{
+    width: 300px;
+    border-radius: 15px;
+  }
+  
+
+.margin{
+    margin:8px;
+
+}
+
+.menuItem {
+  display: block;
+  margin: 2rem 4rem;
+  font-size: 1.8rem;
+  color: rgb(68, 68, 68);
+  text-decoration: none;
+  
+}
+
+.menuItem:hover {
+  text-decoration:none;
+}
+
+.hamburger {
+  position: fixed;
+  z-index: 100;
+  top: 1rem;
+  right: 1rem;
+  padding: 4px;
+  border: rgb(174, 169, 169) solid 1px;
+  background: white;
+  cursor: pointer;
+  border-radius: 10px;
+}
+.closeIcon {
+  display: none;
+}
+
+.menu {
+  position: fixed;
+  transform: translateY(-100%);
+  transition: transform 0.2s;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 99;
+  background: rgb(169, 167, 167);
+  color: white;
+  list-style: none;
+  padding-top: 4rem;
+  opacity: 0.90;
+  border-radius: 10px;
+  margin: 0;
+  
+}
+
+.showMenu {
+  transform: translateY(0);
+}
+#footer{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  height: 300px;
+}
+.Logosociaux{
+  width: 30px;
+}
+
+@media only screen and (min-width:600px){
+
+  .reverse{ 
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-around;
+    margin-bottom: 200px;
+  }
+  
+  .firstText{
+    width: 30%;
+  }
+  #flexbox1{
+    width: 40%;
+  }
+  #martin1{
+    width: 100%;
+    height: 333px;
+  }
+  .paddingright{
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 0;
+    
+  }
+  .margin{
+    margin: 28px;
+    height: auto;
+  }
+  #header{
+    box-shadow: 2px 2px 5px rgb(174, 169, 169);
+    max-height: 94px;
+  }
+  #conure1{
+    width: 32%;
+    top: 100px;
+    left: 65px;
+    position: relative;
+  }
+  #conure2{
+    width: 37%;
+    top: -155px;
+    left: 20px;
+    position: relative;
+  }
+  #conure3{
+    width: 29%;
+    top:-24px;
+    left: -27px;
+    height: auto;
+    position: relative;
+  }
+  #colorbg1{
+    display:flex ;
+    flex-direction: row;
+    
+  }
+  #colorbg2{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-position: center;
+  }
+  #imgbg1{
+    width: 43%;
+    height: 90%;
+    background-size: cover;
+  }
+  #imgbg2{
+    height: 90%;
+    background-size: cover;
+    width: 43%;
+  }
+  #footer{
+    display: flex;
+    flex-direction: row;
+    height: 200px;
+  }
+  .smallFont{
+    font-size: 1.3em;
+  }
+  .span1{
+    font-size: 1.6em;
+  }
+  .paragraph1{
+    font-size: 1.3em;
+    line-height: 28px;
+  }
+  .paragraph2{
+    font-size: 1.2em;
+    width: 478px;
+    
+  }
+  }
+  
